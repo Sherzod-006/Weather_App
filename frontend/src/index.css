@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+@theme {
+  --color-dark: #06141b;
+  --color-light: #ccd0fc;
+  --color-hover: #4a5c6a;
+}
+
+@layer components {
+  .darkLight {
+    @apply dark:bg-dark dark:text-light bg-light text-dark;
+  }
+}

@@ -1,11 +1,12 @@
 //IMPORTING RRD
 import { Outlet } from "react-router-dom";
 //IMPORTING COMPONENTS
+import Navbar from "../components/Navbar";
 
 const MainLayout = () => {
   return (
     <main>
-      {/* <Navbar /> */}
+      <Navbar />
       {/* <HamburgerMenu /> */}
       <section>
         <Outlet />
