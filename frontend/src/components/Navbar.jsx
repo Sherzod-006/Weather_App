@@ -2,21 +2,18 @@
 import { FaLocationDot } from "react-icons/fa6";
 import { FaSearch } from "react-icons/fa";
 import { IoIosSunny, IoMdMoon } from "react-icons/io";
-
 //IMPORTING REACT
-import { useState } from "react";
-
+import { useState, useContext } from "react";
 //IMPORTING RRD
 import { Link } from "react-router-dom";
+//IMPORTING CONTEXTS
+import { LocationContext } from "../contexts/Contexts";
 
 const Navbar = () => {
   //STATES
+  const { curLocation, setCurLocation } = useContext(LocationContext);
   const [darkMode, setDarkMode] = useState(false);
   const [isSignedIn, setIsSignedIn] = useState(false);
-  const [curLocation, setCurLocation] = useState({
-    city: "Namangan",
-    country: "Uzbekistan",
-  });
   const [searchTerm, setSearchTerm] = useState(null);
 
   //BUTTONS
@@ -34,15 +31,6 @@ const Navbar = () => {
   }
 
   const themeClass = "darkLight rounded-full text-xl ";
-  // fetch("https://ipapi.co/json/")
-  //   .then((res) => res.json())
-  //   .then((data) => {
-  //     const address = `${data.city}, ${data.country_name}`;
-  //     console.log(address);
-  //   })
-  //   .catch((err) => {
-  //     console.error(err);
-  //   });
 
   return (
     <section className="darkLight px-3 md:px-6 py-0.5 md:py-1 flex items-center justify-between">
