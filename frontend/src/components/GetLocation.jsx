@@ -3,7 +3,7 @@ import { useState, useEffect, useContext } from "react";
 //IMPORTING CONTEXTS
 import { LocationContext } from "../contexts/Contexts";
 
-export const getLocation = (city) => {
+export const GetLocation = (city) => {
   const { curLocation, setCurLocation } = useContext(LocationContext);
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
