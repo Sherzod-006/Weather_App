@@ -4,7 +4,7 @@ import { FaSearch } from "react-icons/fa";
 import { IoIosSunny, IoMdMoon } from "react-icons/io";
 //IMPORTING REACT
 import { useState, useContext, useEffect } from "react";
-import { getLocation } from "./GetLocation";
+import { GetLocation } from "./GetLocation";
 //IMPORTING RRD
 import { Link } from "react-router-dom";
 //IMPORTING CONTEXTS
@@ -17,7 +17,7 @@ const Navbar = () => {
   const [isSignedIn, setIsSignedIn] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [query, setQuery] = useState("");
-  const [data] = getLocation(query);
+  const [data] = GetLocation(query);
 
   //BUTTONS
   const button = ({ body }) => {
